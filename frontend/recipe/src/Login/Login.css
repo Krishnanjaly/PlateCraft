@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2ebdd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-start {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px 40px;
+  background-color: white;
+  border: 2px solid #3b2a1a;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(59, 42, 26, 0.1);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  color: #3b2a1a;
+}
+
+.head h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  color: #3b2a1a;
+}
+
+.info label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.info input {
+  padding: 10px;
+  border: 1.5px solid #3b2a1a;
+  border-radius: 6px;
+  background-color: #f2ebdd;
+  color: #3b2a1a;
+  font-size: 1rem;
+}
+
+.info input::placeholder {
+  color: #7c6656;
+}
+
+.pass {
+  text-align: right;
+}
+
+.pass a {
+  color: #3b2a1a;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.pass a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3b2a1a;
+  color: #f2ebdd;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5a3f2c;
+}
+.sign
+{
+  color: #3b2a1a;
+}
