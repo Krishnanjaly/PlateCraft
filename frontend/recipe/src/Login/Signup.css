@@ -1,71 +1,147 @@
-body {
-  background-color: #f2ebdd;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
+.signup-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  background-image: 
+    radial-gradient(at 10% 20%, rgba(232, 93, 4, 0.15) 0px, transparent 40%),
+    radial-gradient(at 90% 80%, rgba(255, 186, 8, 0.1) 0px, transparent 40%);
 }
 
 .signup-start {
-  width: 400px;
-  margin: 40px auto;
-  padding: 30px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(59, 42, 26, 0.2);
-  text-align: center;
+  width: 100%;
+  max-width: 480px;
+  padding: 36px 32px;
+  background: var(--bg-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg), 0 0 35px rgba(232, 93, 4, 0.12);
+  position: relative;
+  overflow: hidden;
 }
 
-.signup-start img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 10px;
+.signup-start::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
 }
 
-.signup-start h2 {
-  margin-bottom: 20px;
-  color: #3b2a1a;
+.signup-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.signup-head img {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-primary-light);
+  box-shadow: 0 0 14px var(--color-primary-glow);
+  object-fit: cover;
+}
+
+.signup-head h2 {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .info label {
-  font-weight: bold;
-  color: #3b2a1a;
-  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
 }
 
 .info input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #c4b8aa;
-  border-radius: 8px;
+  padding: 11px 16px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
   font-size: 14px;
+  outline: none;
+  transition: all var(--transition-fast);
 }
 
-button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #3b2a1a;
+.info input:focus {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 0 3px var(--color-primary-glow);
+}
+
+.info input::placeholder {
+  color: var(--text-muted);
+}
+
+.signup-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 13px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 18px var(--color-primary-glow);
+  transition: all var(--transition-fast);
 }
 
-button:hover {
-  background-color: #5a3e27;
+.signup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(232, 93, 4, 0.5);
 }
 
-@media (max-width: 500px) {
-  .signup-start {
-    width: 90%;
-    padding: 20px;
-  }
+.signup-btn:active {
+  transform: translateY(0);
+}
+
+.sign-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+}
+
+.sign-footer a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.sign-footer a:hover {
+  text-decoration: underline;
+}
+
+.back-home {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.back-home:hover {
+  color: var(--color-primary-light);
 }
